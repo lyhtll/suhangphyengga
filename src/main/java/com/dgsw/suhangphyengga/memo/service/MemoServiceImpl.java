@@ -47,6 +47,11 @@ public class MemoServiceImpl implements MemoService {
         return MemoResponse.of(memoRepository.save(memo));
     }
 
+    @Override
+    public List<MemoResponse> getMemoByTitle(String title) {
+        return memoRepository.findByTitleContaining(title).stream().map(MemoResponse::of).toList();
+    }
+
     private void updateProduct(Memo memo, MemoRequest request) {
         if (request.getTitle() != null) memo.setTitle(request.getTitle());
         if (request.getContent() != null) memo.setContent(request.getContent());

@@ -40,4 +40,9 @@ public class MemoController {
         return new ResponseEntity<>(memoService.updateMemo(id,memoRequest),HttpStatus.OK);
     }
 
+    @GetMapping("/search")
+    public ResponseEntity<List<MemoResponse>> getMemoByTitle(@RequestParam String title) {
+        return ResponseEntity.ok(memoService.getMemoByTitle(title));
+    }
+
 }

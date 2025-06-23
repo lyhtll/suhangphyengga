@@ -11,4 +11,5 @@ public interface MemoService {
     MemoResponse saveMemo(MemoRequest memoRequest);
     void deleteMemo(Long id);
     MemoResponse updateMemo(Long id,MemoRequest memoRequest);
+    List<MemoResponse> getMemoByTitle(String title);
 }
