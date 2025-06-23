@@ -1,4 +1,4 @@
-package com.dgsw.suhangphyengga.memo.entity;
+package com.dgsw.suhangphyengga.diary.entity;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -17,10 +17,10 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 @Builder
 @Data
-public class Memo {
+public class Diary {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long memoId;
+    private Long diaryId;
     private String title;
     private String content;
 

@@ -1,4 +1,4 @@
-package com.dgsw.suhangphyengga.memo.dto.request;
+package com.dgsw.suhangphyengga.diary.dto.request;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -9,7 +9,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class MemoRequest {
+public class DiaryRequest {
     private String title;
     private String content;
 }
