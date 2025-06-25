@@ -54,7 +54,7 @@ public class DiaryServiceImpl implements DiaryService {
 
     private void updateDiary(Diary diary, DiaryRequest request) {
         if (request.title() != null) diary.setTitle(request.title());
-        if (request.title() != null) diary.setContent(request.title());
+        if (request.content() != null) diary.setContent(request.content());
     }
 
     private Diary getDiaryById(Long id) {
