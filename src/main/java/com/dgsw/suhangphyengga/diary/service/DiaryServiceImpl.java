@@ -28,8 +28,8 @@ public class DiaryServiceImpl implements DiaryService {
     @Override
     public DiaryResponse saveDiary(DiaryRequest diaryRequest) {
         Diary createdDiary = Diary.builder()
-                .title(diaryRequest.getTitle())
-                .content(diaryRequest.getContent())
+                .title(diaryRequest.title())
+                .content(diaryRequest.content())
                 .build();
         return DiaryResponse.of(diaryRepository.save(createdDiary));
     }
@@ -53,8 +53,8 @@ public class DiaryServiceImpl implements DiaryService {
     }
 
     private void updateDiary(Diary diary, DiaryRequest request) {
-        if (request.getTitle() != null) diary.setTitle(request.getTitle());
-        if (request.getContent() != null) diary.setContent(request.getContent());
+        if (request.title() != null) diary.setTitle(request.title());
+        if (request.title() != null) diary.setContent(request.title());
     }
 
     private Diary getDiaryById(Long id) {
