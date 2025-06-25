@@ -6,15 +6,12 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@Data
 @Builder
-@NoArgsConstructor
-@AllArgsConstructor
-public class DiaryResponse {
-    private Long id;
-    private String title;
-    private String content;
-
+public record DiaryResponse(
+          Long id,
+         String title,
+         String content
+) {
     public static DiaryResponse of(Diary diary) {
         return DiaryResponse.builder()
                 .id(diary.getDiaryId())
