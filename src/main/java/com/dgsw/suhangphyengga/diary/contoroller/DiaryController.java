@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+// 헬로
 @RestController
 @RequestMapping("/diary")
 @RequiredArgsConstructor
